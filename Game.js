@@ -55,7 +55,7 @@ var Game = /** @class */ (function () {
         return Result.None;
     };
     Game.prototype.makePlay = function (x) {
-        if (isNaN(x) || x < 0 || x >= this.boardWidth - 1 || this.board[0][x] !== Player.None) {
+        if (isNaN(x) || x < 0 || x > this.boardWidth - 1 || this.board[0][x] !== Player.None) {
             throw new Error('Invalid move');
         }
         var top = -1;
